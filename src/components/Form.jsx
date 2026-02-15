@@ -101,7 +101,7 @@ function Form() {
             </div>
           );
         })}
-        <button className="btn btn-info text-white w-full font-semibold mt-5 disabled:bg-gray-400 disabled:text-white" disabled={loading}>
+        <button className="btn btn-info p-6 text-lg text-white w-full font-semibold mt-5 disabled:bg-gray-400 disabled:text-white" disabled={loading}>
           {loading ? <span className="loading loading-spinner" /> : "submit"}
         </button>
       </form>
