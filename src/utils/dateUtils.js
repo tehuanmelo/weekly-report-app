@@ -12,7 +12,7 @@ export function getLastMonday() {
     const monday = new Date(today)
     const day = idx()
     monday.setDate(today.getDate() - (day - 1))
-    if (day >= 1 && day <= 3) monday.setDate(monday.getDate() - 7)
+    if (day >= 1 && day <= 2) monday.setDate(monday.getDate() - 7)
     return monday
 }
 
