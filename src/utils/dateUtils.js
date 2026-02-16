@@ -27,6 +27,7 @@ export function getFormatedDate(idx) {
 }
 
 export function getWeekReport() {
+    
     const monday = getLastMonday()
     const sunday = new Date(monday)
     sunday.setDate(sunday.getDate() + 6)

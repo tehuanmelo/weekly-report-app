@@ -15,7 +15,7 @@ function Form() {
   const { submit, loading } = useSubmit();
   const { error, validateForm } = useError();
   const [values, setValues] = useState({
-    week: getLastMonday().toLocaleDateString(),
+    week: getLastMonday().toISOString().split("T")[0],
     email: "",
     psName: "",
     base: "",
