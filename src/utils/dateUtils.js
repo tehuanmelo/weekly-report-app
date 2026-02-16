@@ -41,3 +41,12 @@ export function getWeekReport() {
     }).replace(" ", "-")
     return `${monStr} to ${sunStr}`
 }
+
+export const formatter = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "Asia/Dubai",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit"
+})
+
+

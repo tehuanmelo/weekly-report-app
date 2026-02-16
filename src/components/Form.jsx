@@ -8,14 +8,14 @@ import useError from "../hooks/useError";
 import useSubmit from "../hooks/useSubmit";
 
 import { COACHES, BASES, WEEKDAYS } from "../utils/constants.js";
-import { getFormatedDate, getLastMonday } from "../utils/dateUtils.js";
+import { formatter, getFormatedDate, getLastMonday } from "../utils/dateUtils.js";
 
 function Form() {
   const navigate = useNavigate();
   const { submit, loading } = useSubmit();
   const { error, validateForm } = useError();
   const [values, setValues] = useState({
-    week: getLastMonday().toISOString().split("T")[0],
+    week: formatter.format(getLastMonday()),
     email: "",
     psName: "",
     base: "",
